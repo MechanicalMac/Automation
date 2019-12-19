@@ -7,10 +7,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 class Driver {
     private ChromeDriver driver;
     Driver(){
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-fullscreen");
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
 
     ChromeDriver getDriverInstance(){
