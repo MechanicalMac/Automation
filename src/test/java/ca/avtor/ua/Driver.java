@@ -4,16 +4,16 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class Driver {
+class Driver {
     private ChromeDriver driver;
     Driver(){
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
+        options.addArguments("--start-fullscreen");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
     }
 
-    public ChromeDriver getDriverInstance(){
+    ChromeDriver getDriverInstance(){
         return driver;
     }
 }
