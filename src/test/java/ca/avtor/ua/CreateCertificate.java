@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CreateCertificate {
     @Test
-    @FileParameters(value = "/Users/mechanical_mac/Desktop/Automation/src/test/resources/resources.csv", mapper = CsvWithHeaderMapper.class)
+    @FileParameters(value = "src/test/resources/resources.csv", mapper = CsvWithHeaderMapper.class)
     public void generateCertificate(String surname, String name, String city) throws InterruptedException {
         ChromeDriver chromeDriver = new Driver().getDriverInstance();
         WebDriverWait wait = new WebDriverWait(chromeDriver, 50);

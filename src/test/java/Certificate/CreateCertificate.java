@@ -1,4 +1,4 @@
-package Certificate;
+/*package Certificate;
 
 import Login.Login;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -29,4 +29,4 @@ public class CreateCertificate {
         deviceButton.click();
         Thread.sleep(5000);
     }
-}
+} */
