@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Login {
     @Test
     @FileParameters(value = "src\\test\\resources\\resources.csv", mapper = CsvWithHeaderMapper.class)
-    public void loginUser(String name, String password) throws InterruptedException {
+    public void loginUser(String name, String password) {
         WebDriverManager.chromedriver().setup();
         ChromeDriver chromeDriver = new ChromeDriver();
         String url = "http://av-avtor-srv:8082/";
