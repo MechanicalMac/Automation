@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ChangePinCode {
     @Test
     @FileParameters(value = "src/test/resources/resourcesPinCode.csv", mapper = CsvWithHeaderMapper.class)
-    public void changePinCode(String currentPin, String newPin, String confirmNewPin) {
+    public void changePinCode(String currentPin, String newPin, String confirmNewPin) throws InterruptedException {
         String url = "http://ca.avtor.ua";
         ChromeDriver chromeDriver = new Driver().getDriverInstance();
         WebDriverWait wait = new WebDriverWait(chromeDriver, 20);
@@ -25,6 +25,8 @@ public class ChangePinCode {
         deviceList.click();
         WebElement device = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[3]/div/div/div[1]")));
         device.click();
-        chromeDriver.quit();
+        WebElement changePinCodeButton = chromeDriver.findElementByXPath("//*[@id=\"root\"]/div/div[2]/div/div/div[5]/div/div/nav/a[3]");
+        changePinCodeButton.click();
+        Thread.sleep(5000);
     }
 }
