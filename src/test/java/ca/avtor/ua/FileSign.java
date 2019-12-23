@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 @RunWith(JUnitParamsRunner.class)
 public class FileSign {
     @Test
-    @FileParameters(value = "src/test/resources/PathToSignFiles.csv", mapper = CsvWithHeaderMapper.class)
+    @FileParameters(value = "src/test/resources/PathToSignFiles_macOS.csv", mapper = CsvWithHeaderMapper.class)
     public void CheckFileSign(String path, String pinCode) throws InterruptedException {
         ChromeDriver chromeDriver = new Driver().getDriverInstance();
         String url = "http://ca.avtor.ua/";
